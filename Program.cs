@@ -13,10 +13,11 @@ int primoNumero = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Inserisci un altro numero");
 int secondoNumero = Convert.ToInt32(Console.ReadLine());
 
-if(primoNumero > secondoNumero)
+if (primoNumero > secondoNumero)
 {
     Console.WriteLine(primoNumero);
-} else
+}
+else
 {
     Console.WriteLine(secondoNumero);
 }
@@ -65,7 +66,7 @@ for (int i = 0; i < numeriDueDieci.Length; i++)
     sommaDueDieci = sommaDueDieci + numeriDueDieci[i];
 
 }
-    media = sommaDueDieci / numeriDueDieci.Length;
+media = sommaDueDieci / numeriDueDieci.Length;
 Console.WriteLine("somma: " + sommaDueDieci);
 Console.WriteLine("media: " + media);
 
@@ -76,12 +77,13 @@ Console.WriteLine("media: " + media);
 Console.WriteLine("Inserisci un numero");
 int numeroUtente = Convert.ToInt32(Console.ReadLine());
 
-if(numeroUtente % 2 == 0)
+if (numeroUtente % 2 == 0)
 {
     Console.WriteLine(numeroUtente);
-} else
+}
+else
 {
-    Console.WriteLine(numeroUtente+1);
+    Console.WriteLine(numeroUtente + 1);
 
 }
 
@@ -97,7 +99,7 @@ bool YesOrNot = false;
 
 for (int i = 0; i < invitatiFesta.Length; i++)
 {
-    if(nomeUser == invitatiFesta[i])
+    if (nomeUser == invitatiFesta[i])
     {
         YesOrNot = true;
     }
@@ -106,7 +108,8 @@ for (int i = 0; i < invitatiFesta.Length; i++)
 if (YesOrNot == true)
 {
     Console.WriteLine("Puoi partecipare!");
-} else
+}
+else
 {
     Console.WriteLine("Mi dispiace ma non puoi partecipare!");
 
@@ -120,7 +123,7 @@ int[] arrNumeri = new int[6];
 for (int i = 0; i < arrNumeri.Length; i++)
 {
     Console.WriteLine("Inserisci un numero");
-   int numero = Convert.ToInt32(Console.ReadLine());
+    int numero = Convert.ToInt32(Console.ReadLine());
     if (numero % 2 != 0)
     {
         arrNumeri[i] = numero;
@@ -132,13 +135,13 @@ for (int i = 0; i < arrNumeri.Length; i++)
 //Snack8.Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in
 //posizione dispari
 
-int[] arrNumeriInt = {2,4,5,7,9,10,13};
+int[] arrNumeriInt = { 2, 4, 5, 7, 9, 10, 13 };
 int sommaArrayDispari = 0;
 
 for (int i = 0; i < arrNumeriInt.Length; i++)
 {
 
-    if ((i+1) % 2 != 0)
+    if ((i + 1) % 2 != 0)
     {
         sommaArrayDispari = sommaArrayDispari + arrNumeriInt[i];
     }
@@ -148,29 +151,22 @@ for (int i = 0; i < arrNumeriInt.Length; i++)
 Console.WriteLine(sommaArrayDispari);
 
 //Ciclo while
-//Snack9.Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+//Snack9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
 //Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la
 //somma degli elementi è minore di 50.
 
-for (int i = 0; i < 50; i++)
+int[] ArrayVuoto = new int[50];
+
+int SommaArrayCinquanta = 0;
+
+
+for (int i = 0; SommaArrayCinquanta < 50; i++)
 {
-    int[] arrNumeriMinCinquanta = new int[i];
-}
-
-int sommaNum = 0;
-int volte = 0;
-
-if (sommaNum > 50)
-{
-    volte++;
-
     Console.WriteLine("Inserisci un numero");
-
-    for (int i = 0; i < arrNumeriMinCinquanta.Length; i++)
-    {
-
-    }
+    int NumeroFinoaCinquanta = Convert.ToInt32(Console.ReadLine());
+    SommaArrayCinquanta = SommaArrayCinquanta + NumeroFinoaCinquanta;
 }
+Console.WriteLine("La somma è: " + SommaArrayCinquanta);
 
 
 //Random
@@ -180,17 +176,17 @@ if (sommaNum > 50)
 
 Console.WriteLine("Inserisci un numero");
 int N = Convert.ToInt32(Console.ReadLine());
-for(int i = 0; i < N; i++)
+for (int i = 0; i < N; i++)
 {
     Console.WriteLine("Array " + i);
 
     int[] arrayCasuale = new int[10];
-    for(int j = 0; j < 10; j++)
+    for (int j = 0; j < 10; j++)
     {
         Random rnd = new Random();
         int numCasuale = rnd.Next(1, 101);
         arrayCasuale[j] = numCasuale;
-    Console.Write(arrayCasuale[j] + " ");
+        Console.Write(arrayCasuale[j] + " ");
     }
     Console.WriteLine();
 }
