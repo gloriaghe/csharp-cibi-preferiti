@@ -4,6 +4,8 @@
 //Snack1. L’utente inserisce due numeri in successione.
 //Il software stampa il maggiore.
 
+using System.Runtime.ConstrainedExecution;
+
 Console.WriteLine("Inserisci un numero");
 int primoNumero = Convert.ToInt32(Console.ReadLine());
 
@@ -34,8 +36,37 @@ if (primaParola.Length < secondaParola.Length)
 else
 {
     Console.WriteLine("La parola più corta è: " + secondaParola + " mentre la più lunga è: " + primaParola);
+}
+
+//Ciclo for
+//Snack3. Il software deve chiedere per 10 volte all’utente di inserire un numero.
+//Il programma stampa la somma di tutti i numeri inseriti.
+
+int[] numeri = new int[10];
+
+int somma = 0;
+for (int i = 0; i < numeri.Length; i++)
+{
+    Console.WriteLine("Inserisci un numero");
+    numeri[i] = Convert.ToInt32(Console.ReadLine());
+    somma = somma + numeri[i];
+}
+Console.WriteLine(somma);
+
+//Snack4. Calcola la somma e la media dei numeri da 2 a 10.
+
+int[] numeriDueDieci = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int sommaDueDieci = 0;
+double media;
+
+for (int i = 0; i < numeriDueDieci.Length; i++)
+{
+    sommaDueDieci = sommaDueDieci + numeriDueDieci[i];
 
 }
+    media = sommaDueDieci / numeriDueDieci.Length;
+Console.WriteLine("somma: " + sommaDueDieci);
+Console.WriteLine("media: " + media);
 
 
 //ESERCIZIO MATTINA
