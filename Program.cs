@@ -4,6 +4,7 @@
 //Snack1. L’utente inserisce due numeri in successione.
 //Il software stampa il maggiore.
 
+using System;
 using System.Runtime.ConstrainedExecution;
 
 Console.WriteLine("Inserisci un numero");
@@ -83,6 +84,68 @@ if(numeroUtente % 2 == 0)
     Console.WriteLine(numeroUtente+1);
 
 }
+
+//Array
+//Snack6.In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+//Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla
+//festa.
+
+string[] invitatiFesta = { "Gloria", "Luca", "Nathan" };
+Console.WriteLine("Come ti chiami?");
+string nomeUser = Console.ReadLine();
+bool YesOrNot = false;
+
+for (int i = 0; i < invitatiFesta.Length; i++)
+{
+    if(nomeUser == invitatiFesta[i])
+    {
+        YesOrNot = true;
+    }
+}
+
+if (YesOrNot == true)
+{
+    Console.WriteLine("Puoi partecipare!");
+} else
+{
+    Console.WriteLine("Mi dispiace ma non puoi partecipare!");
+
+}
+//Snack7.Crea un array vuoto.
+//Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
+//nell’array.
+
+int[] arrNumeri = new int[6];
+
+for (int i = 0; i < arrNumeri.Length; i++)
+{
+    Console.WriteLine("Inserisci un numero");
+   int numero = Convert.ToInt32(Console.ReadLine());
+    if (numero % 2 != 0)
+    {
+        arrNumeri[i] = numero;
+    }
+
+}
+
+
+//Snack8.Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in
+//posizione dispari
+
+int[] arrNumeriInt = {2,4,5,7,9,10,13};
+int sommaArrayDispari = 0;
+
+for (int i = 0; i < arrNumeriInt.Length; i++)
+{
+
+    if ((i+1) % 2 != 0)
+    {
+        sommaArrayDispari = sommaArrayDispari + arrNumeriInt[i];
+    }
+
+}
+
+Console.WriteLine(sommaArrayDispari);
 
 
 
