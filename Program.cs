@@ -147,6 +147,56 @@ for (int i = 0; i < arrNumeriInt.Length; i++)
 
 Console.WriteLine(sommaArrayDispari);
 
+//Ciclo while
+//Snack9.Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+//Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la
+//somma degli elementi è minore di 50.
+
+for (int i = 0; i < 50; i++)
+{
+    int[] arrNumeriMinCinquanta = new int[i];
+}
+
+int sommaNum = 0;
+int volte = 0;
+
+if (sommaNum > 50)
+{
+    volte++;
+
+    Console.WriteLine("Inserisci un numero");
+
+    for (int i = 0; i < arrNumeriMinCinquanta.Length; i++)
+    {
+
+    }
+}
+
+
+//Random
+//Snack10. Fai inserire un numero, che chiameremo N, all’utente.
+//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+//Ogni volta che ne crei uno, stampalo a schermo.
+
+Console.WriteLine("Inserisci un numero");
+int N = Convert.ToInt32(Console.ReadLine());
+for(int i = 0; i < N; i++)
+{
+    Console.WriteLine("Array " + i);
+
+    int[] arrayCasuale = new int[10];
+    for(int j = 0; j < 10; j++)
+    {
+        Random rnd = new Random();
+        int numCasuale = rnd.Next(1, 101);
+        arrayCasuale[j] = numCasuale;
+    Console.Write(arrayCasuale[j] + " ");
+    }
+    Console.WriteLine();
+}
+
+
+
 
 
 //ESERCIZIO MATTINA
