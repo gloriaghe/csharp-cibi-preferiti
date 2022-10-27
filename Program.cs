@@ -16,39 +16,63 @@ using System.Linq.Expressions;
 //Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari.
 //In questo caso vanno stampati i 2 elementi in centro alla vostra classifica.
 
-string[] cibiPreferiti = { "Pizza", "Carbonara", "Torta al cioccolato", "Lasagna", "Tagliata al sangue", "Tiramisù", "Fragole" ,"Mango" };
+string[] cibiPreferiti = { "Pizza", "Carbonara", "Torta al cioccolato", "Lasagna", "Tagliata al sangue", "Tiramisù", "Fragole" , "Mango" };
 
 Console.WriteLine("Lunghezza: " + cibiPreferiti.Length);
 
+//altri modi per stampare:
+//Console.WriteLine("Lunghezza: {0}", cibiPreferiti.Length);
+//Console.WriteLine($"Lunghezza: {cibiPreferiti.Length}");
 
 
-for(int i = 0; i < cibiPreferiti.Length; i++)
-{
-    Console.WriteLine(i+1 + cibiPreferiti[i]);
-
-}
-
-
+Console.WriteLine();
+Console.WriteLine("Classifica cibi:");
 for (int i = 0; i < cibiPreferiti.Length; i++)
 {
+    Console.Write(i + 1 + " - "); //riga stampata che non va a capo
+    Console.WriteLine(cibiPreferiti[i]);
 
-    switch (i)
-    {
-        case 0:
+    //Console.WriteLine(i+1 + cibiPreferiti[i]);
 
-            Console.WriteLine("Primo-" + cibiPreferiti[i]);
-
-            break;
-        case 3:
-        case 4:
-            Console.WriteLine("Medio-" + cibiPreferiti[i]);
-
-            break;
-        case 7:
-            Console.WriteLine("Ultimo-" + cibiPreferiti[i]);
-            break;
-        //default:
-        //    // code block
-        //    break;
-    }
 }
+
+
+Console.WriteLine();
+
+Console.WriteLine("Primo: " + cibiPreferiti[0]);
+
+if(cibiPreferiti.Length % 2 == 0)
+{
+    //pari
+    int mediana = cibiPreferiti.Length / 2;
+    Console.WriteLine("Centrale: {0} e {1}", cibiPreferiti[mediana - 1], cibiPreferiti[mediana]);
+} else
+{
+    // dispari
+    int mediana = cibiPreferiti.Length / 2;
+    Console.WriteLine("Centrale: " + cibiPreferiti[mediana]);
+
+
+}
+Console.WriteLine("Ultimo: " + cibiPreferiti[cibiPreferiti.Length-1]);
+
+
+//for (int i = 0; i < cibiPreferiti.Length; i++)
+//{
+//    switch (i)
+//    {
+//        case 0:
+//            Console.WriteLine("Primo-" + cibiPreferiti[i]);
+
+//            break;
+//        case 3:
+//        case 4:
+//            Console.WriteLine("Medio-" + cibiPreferiti[i]);
+
+//            break;
+//        case 7:
+//            Console.WriteLine("Ultimo-" + cibiPreferiti[i]);
+//            break;
+       
+//    }
+//}
