@@ -68,6 +68,23 @@ for (int i = 0; i < numeriDueDieci.Length; i++)
 Console.WriteLine("somma: " + sommaDueDieci);
 Console.WriteLine("media: " + media);
 
+//Operatore modulo
+//Snack5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari,
+//stampa il numero, se è dispari, stampa il numero successivo
+
+Console.WriteLine("Inserisci un numero");
+int numeroUtente = Convert.ToInt32(Console.ReadLine());
+
+if(numeroUtente % 2 == 0)
+{
+    Console.WriteLine(numeroUtente);
+} else
+{
+    Console.WriteLine(numeroUtente+1);
+
+}
+
+
 
 //ESERCIZIO MATTINA
 
