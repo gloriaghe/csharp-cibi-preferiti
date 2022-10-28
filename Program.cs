@@ -1,4 +1,59 @@
-﻿////ESERCIZI POMERIGGIO
+﻿//ESERCIZI 28/10
+
+//Snack 1
+//Dare la possibilità di inserire due parole.
+//Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+Console.WriteLine("Inserisci due parole");
+string PrimaParola = Console.ReadLine();
+string SecondaParola = Console.ReadLine();
+
+string ParolaLunga = "";
+Console.WriteLine(LunghezzaParole(PrimaParola, SecondaParola));
+;
+
+string LunghezzaParole(string parola1, string parola2)
+{
+    if (parola1.Length == parola2.Length)
+    {
+        ParolaLunga = parola1 + " " + parola2;
+        return ParolaLunga;
+
+    }
+    else if (parola1.Length > parola2.Length)
+        return parola1;
+    else
+        return parola2;
+
+}
+
+
+//Snack 2
+//Scrivere una funzione per verificare se un numero è pari o dispari.
+//Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.
+
+string ParioDispari(int numero)
+{
+    if(numero % 2 == 0)
+    {
+        return "Il numero è pari";
+
+    }
+    else
+    {
+        return "Il numero è dispari";
+
+    }
+}
+
+Console.WriteLine("Scegli un numero!");
+int numeroScelto = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(ParioDispari(numeroScelto));
+
+
+
+////ESERCIZI POMERIGGIO
 
 ////Istruzioni condizionali
 ////Snack1. L’utente inserisce due numeri in successione.
@@ -145,7 +200,7 @@
 
 //    if (i  % 2 != 0)
 //        sommaArrayDispari = sommaArrayDispari + arrNumeriInt[i];
-    
+
 
 //}
 
@@ -156,42 +211,42 @@
 //Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la
 //somma degli elementi è minore di 50.
 
-int[] ArrayVuoto = new int[50];
+//int[] ArrayVuoto = new int[50];
 
-int SommaArrayCinquanta = 0;
- Console.WriteLine("Inserisci un numero fino ad arivare a 50");
+//int SommaArrayCinquanta = 0;
+// Console.WriteLine("Inserisci un numero fino ad arivare a 50");
 
-while ( SommaArrayCinquanta < 50)
-{
-    int i = 0;
-    int NumeroFinoaCinquanta = Convert.ToInt32(Console.ReadLine());
-    SommaArrayCinquanta = SommaArrayCinquanta + NumeroFinoaCinquanta;
-    i++;
-}
-Console.WriteLine("La somma è: " + SommaArrayCinquanta);
+//while ( SommaArrayCinquanta < 50)
+//{
+//    int i = 0;
+//    int NumeroFinoaCinquanta = Convert.ToInt32(Console.ReadLine());
+//    SommaArrayCinquanta = SommaArrayCinquanta + NumeroFinoaCinquanta;
+//    i++;
+//}
+//Console.WriteLine("La somma è: " + SommaArrayCinquanta);
 
 
-//Random
-//Snack10. Fai inserire un numero, che chiameremo N, all’utente.
-//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
-//Ogni volta che ne crei uno, stampalo a schermo.
+////Random
+////Snack10. Fai inserire un numero, che chiameremo N, all’utente.
+////Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+////Ogni volta che ne crei uno, stampalo a schermo.
 
-Console.WriteLine("Inserisci un numero con cui creare degli array");
-int N = Convert.ToInt32(Console.ReadLine());
-for (int i = 0; i < N; i++)
-{
-    Console.WriteLine("Array " + i);
+//Console.WriteLine("Inserisci un numero con cui creare degli array");
+//int N = Convert.ToInt32(Console.ReadLine());
+//for (int i = 0; i < N; i++)
+//{
+//    Console.WriteLine("Array " + i);
 
-    int[] arrayCasuale = new int[10];
-    for (int j = 0; j < 10; j++)
-    {
-        Random rnd = new Random();
-        int numCasuale = rnd.Next(1, 101);
-        arrayCasuale[j] = numCasuale;
-        Console.Write(arrayCasuale[j] + " ");
-    }
-    Console.WriteLine();
-}
+//    int[] arrayCasuale = new int[10];
+//    for (int j = 0; j < 10; j++)
+//    {
+//        Random rnd = new Random();
+//        int numCasuale = rnd.Next(1, 101);
+//        arrayCasuale[j] = numCasuale;
+//        Console.Write(arrayCasuale[j] + " ");
+//    }
+//    Console.WriteLine();
+//}
 
 
 
