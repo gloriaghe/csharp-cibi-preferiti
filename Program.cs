@@ -1,154 +1,155 @@
-﻿//ESERCIZI POMERIGGIO
+﻿////ESERCIZI POMERIGGIO
 
-//Istruzioni condizionali
-//Snack1. L’utente inserisce due numeri in successione.
-//Il software stampa il maggiore.
+////Istruzioni condizionali
+////Snack1. L’utente inserisce due numeri in successione.
+////Il software stampa il maggiore.
 
-using System;
-using System.Runtime.ConstrainedExecution;
+//using System;
+//using System.Runtime.ConstrainedExecution;
 
-Console.WriteLine("Inserisci un numero");
-int primoNumero = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Inserisci un numero");
+//int primoNumero = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Inserisci un altro numero");
-int secondoNumero = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Inserisci un altro numero");
+//int secondoNumero = Convert.ToInt32(Console.ReadLine());
 
-if (primoNumero > secondoNumero)
-{
-    Console.WriteLine(primoNumero);
-}
-else
-{
-    Console.WriteLine(secondoNumero);
-}
+//if (primoNumero > secondoNumero)
+//{
+//    Console.WriteLine(primoNumero);
+//}
+//else
+//{
+//    Console.WriteLine(secondoNumero);
+//}
 
-//Snack2. L’utente inserisce due parole in successione.
-//Il software stampa prima la parola più corta, poi la parola più lunga.
+////Snack2. L’utente inserisce due parole in successione.
+////Il software stampa prima la parola più corta, poi la parola più lunga.
 
-Console.WriteLine("Inserisci una parola");
-string primaParola = Console.ReadLine();
+//Console.WriteLine("Inserisci una parola");
+//string primaParola = Console.ReadLine();
 
-Console.WriteLine("Inserisci un altra parola");
-string secondaParola = Console.ReadLine();
+//Console.WriteLine("Inserisci un altra parola");
+//string secondaParola = Console.ReadLine();
 
-if (primaParola.Length < secondaParola.Length)
-{
-    Console.WriteLine("La parola più corta è: " + primaParola + " mentre la più lunga è: " + secondaParola);
-}
-else
-{
-    Console.WriteLine("La parola più corta è: " + secondaParola + " mentre la più lunga è: " + primaParola);
-}
+//if (primaParola.Length < secondaParola.Length)
+//{
+//    Console.WriteLine("La parola più corta è: " + primaParola + " mentre la più lunga è: " + secondaParola);
+//}
+//else
+//{
+//    Console.WriteLine("La parola più corta è: " + secondaParola + " mentre la più lunga è: " + primaParola);
+//}
 
-//Ciclo for
-//Snack3. Il software deve chiedere per 10 volte all’utente di inserire un numero.
-//Il programma stampa la somma di tutti i numeri inseriti.
+////Ciclo for
+////Snack3. Il software deve chiedere per 10 volte all’utente di inserire un numero.
+////Il programma stampa la somma di tutti i numeri inseriti.
 
-int[] numeri = new int[10];
+//int[] numeri = new int[10];
 
-int somma = 0;
-for (int i = 0; i < numeri.Length; i++)
-{
-    Console.WriteLine("Inserisci un numero");
-    numeri[i] = Convert.ToInt32(Console.ReadLine());
-    somma = somma + numeri[i];
-}
-Console.WriteLine(somma);
+//int somma = 0;
+//for (int i = 0; i < numeri.Length; i++)
+//{
+//    Console.WriteLine("Inserisci un numero");
+//    numeri[i] = Convert.ToInt32(Console.ReadLine());
+//    somma = somma + numeri[i];
+//}
+//Console.WriteLine(somma);
 
-//Snack4. Calcola la somma e la media dei numeri da 2 a 10.
+////Snack4. Calcola la somma e la media dei numeri da 2 a 10.
 
-int[] numeriDueDieci = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-int sommaDueDieci = 0;
-double media;
+//int sommaDueDieci = 0;
+//int media;
 
-for (int i = 0; i < numeriDueDieci.Length; i++)
-{
-    sommaDueDieci = sommaDueDieci + numeriDueDieci[i];
+//for (int i = 2; i <= 10; i++)
+//{
+//    sommaDueDieci += i;
 
-}
-media = sommaDueDieci / numeriDueDieci.Length;
-Console.WriteLine("somma: " + sommaDueDieci);
-Console.WriteLine("media: " + media);
+//}
+//media = sommaDueDieci / 9;
+//Console.WriteLine("somma: " + sommaDueDieci);
+//Console.WriteLine("media: " + media);
 
-//Operatore modulo
-//Snack5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari,
-//stampa il numero, se è dispari, stampa il numero successivo
+////Operatore modulo
+////Snack5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari,
+////stampa il numero, se è dispari, stampa il numero successivo
 
-Console.WriteLine("Inserisci un numero");
-int numeroUtente = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Inserisci un numero");
+//int numeroUtente = Convert.ToInt32(Console.ReadLine());
 
-if (numeroUtente % 2 == 0)
-{
-    Console.WriteLine(numeroUtente);
-}
-else
-{
-    Console.WriteLine(numeroUtente + 1);
+//if (numeroUtente % 2 == 0)
+//{
+//    Console.WriteLine(numeroUtente);
+//}
+//else
+//{
+//    Console.WriteLine(numeroUtente + 1);
 
-}
+//}
 
-//Array
-//Snack6.In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
-//Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla
-//festa.
+////Array
+////Snack6.In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+////Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla
+////festa.
 
-string[] invitatiFesta = { "Gloria", "Luca", "Nathan" };
-Console.WriteLine("Come ti chiami?");
-string nomeUser = Console.ReadLine();
-bool YesOrNot = false;
+//string[] invitatiFesta = { "Gloria", "Luca", "Nathan" };
+//Console.WriteLine("Come ti chiami?");
+//string nomeUser = Console.ReadLine();
+//bool YesOrNot = false;
 
-for (int i = 0; i < invitatiFesta.Length; i++)
-{
-    if (nomeUser == invitatiFesta[i])
-    {
-        YesOrNot = true;
-    }
-}
+//for (int i = 0; i < invitatiFesta.Length; i++)
+//{
+//    if (nomeUser == invitatiFesta[i])
+//    {
+//        YesOrNot = true;
+//        break;
+//    }
+//}
 
-if (YesOrNot == true)
-{
-    Console.WriteLine("Puoi partecipare!");
-}
-else
-{
-    Console.WriteLine("Mi dispiace ma non puoi partecipare!");
+//if (YesOrNot == true)
+//{
+//    Console.WriteLine("Puoi partecipare!");
+//}
+//else
+//{
+//    Console.WriteLine("Mi dispiace ma non puoi partecipare!");
 
-}
+//}
 //Snack7.Crea un array vuoto.
 //Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //nell’array.
 
-int[] arrNumeri = new int[6];
+//int[] arrNumeri = new int[6];
 
-for (int i = 0; i < arrNumeri.Length; i++)
-{
-    Console.WriteLine("Inserisci un numero");
-    int numero = Convert.ToInt32(Console.ReadLine());
-    if (numero % 2 != 0)
-    {
-        arrNumeri[i] = numero;
-    }
+//for (int i = 0; i < arrNumeri.Length; i++)
+//{
+//    Console.WriteLine("Inserisci un numero");
+//    int numero = Convert.ToInt32(Console.ReadLine());
+//    if (numero % 2 != 0)
+//    {
+//        arrNumeri[i] = numero;
+//        Console.WriteLine("Inserito nell'array");
 
-}
+//    }
+
+//}
 
 
 //Snack8.Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in
 //posizione dispari
 
-int[] arrNumeriInt = { 2, 4, 5, 7, 9, 10, 13 };
-int sommaArrayDispari = 0;
+//int[] arrNumeriInt = { 2, 0, 5, 10, 9, 5, 13 };
+//int sommaArrayDispari = 0;
 
-for (int i = 0; i < arrNumeriInt.Length; i++)
-{
+//for (int i = 0; i < arrNumeriInt.Length; i++)
+//{
 
-    if ((i + 1) % 2 != 0)
-    {
-        sommaArrayDispari = sommaArrayDispari + arrNumeriInt[i];
-    }
+//    if (i  % 2 != 0)
+//        sommaArrayDispari = sommaArrayDispari + arrNumeriInt[i];
+    
 
-}
+//}
 
-Console.WriteLine(sommaArrayDispari);
+//Console.WriteLine("La somma dell'array in posizione dispari è: " + sommaArrayDispari);
 
 //Ciclo while
 //Snack9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
@@ -158,13 +159,14 @@ Console.WriteLine(sommaArrayDispari);
 int[] ArrayVuoto = new int[50];
 
 int SommaArrayCinquanta = 0;
+ Console.WriteLine("Inserisci un numero fino ad arivare a 50");
 
-
-for (int i = 0; SommaArrayCinquanta < 50; i++)
+while ( SommaArrayCinquanta < 50)
 {
-    Console.WriteLine("Inserisci un numero");
+    int i = 0;
     int NumeroFinoaCinquanta = Convert.ToInt32(Console.ReadLine());
     SommaArrayCinquanta = SommaArrayCinquanta + NumeroFinoaCinquanta;
+    i++;
 }
 Console.WriteLine("La somma è: " + SommaArrayCinquanta);
 
@@ -174,7 +176,7 @@ Console.WriteLine("La somma è: " + SommaArrayCinquanta);
 //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
 //Ogni volta che ne crei uno, stampalo a schermo.
 
-Console.WriteLine("Inserisci un numero");
+Console.WriteLine("Inserisci un numero con cui creare degli array");
 int N = Convert.ToInt32(Console.ReadLine());
 for (int i = 0; i < N; i++)
 {
